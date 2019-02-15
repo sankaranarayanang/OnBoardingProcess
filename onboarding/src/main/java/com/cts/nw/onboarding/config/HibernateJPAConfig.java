@@ -41,9 +41,9 @@ public class HibernateJPAConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://10.251.33.162:3306/world");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/world");
 		dataSource.setUsername("root");
-		dataSource.setPassword("password");
+		dataSource.setPassword("root");
 		return dataSource;
 	}
 
