@@ -1,12 +1,13 @@
-/**
- * 
- */
 package com.cts.nw.onboarding.bo;
 
-import java.io.Serializable;
 
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -14,104 +15,92 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "RESOURCEDETAIL")
-public class ResourceDetail implements Serializable {
+@Table(name = "RESOURCESMASTER")
+@NamedQueries({
+    @NamedQuery(name = "ResourceDetail.findAll", query = "SELECT r FROM ResourceDetail r")
+})
+public class ResourceDetail implements Serializable{
 
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private String empId;
+	@Column(name="EmployeeId")
+	private Integer empId;
+	
+	@Column(name="EmployeeName")
 	private String empFullName;
+	
+	@Column(name="Email")
 	private String email;
+	
+	@Column(name="FirstName")
 	private String firstName;
+	
+	@Column(name="LastName")
 	private String lastName;
-	private String dateOfBirth;
+	
+	@Column(name="DOB")
+	private Date dateOfBirth;
+	
+	@Column(name="PassportNumber")
 	private String passportNo;
+	
+	@Column(name="TeamName")
 	private String teamName;
+	
+	@Column(name="ProjectName")
 	private String projName;
-	private String projId;
+	
+	@Column(name="ProjectId")
+	private Integer projId;
+	
+	@Column(name="Requester")
 	private String requester;
+	
+	@Column(name="Processor")
 	private String processor;
+	
+	@Column(name="Location")
 	private String location;
-	private String startDate;
-	private String endDate;
+	
+	@Column(name="StartDate")
+	private Date startDate;
+	
+	@Column(name="EndDate")
+	private Date endDate;
+	
+	@Column(name="NationwideId")
 	private String nationWideId;
-	private String nationWideIdDate;
+	
+	@Column(name="NationwideIdCreatedDate")
+	private Date nationWideIdDate;
+	
+	@Column(name="Comments")
 	private String comments;
+	
+	@Column(name="ApprovalStatus")
 	private String status;
+	
+	@Column(name="TerminatedStatus")
+	private String terminated;
 
-	/**
-	 * @return the nationWideId
-	 */
-	public String getNationWideId() {
-		return nationWideId;
-	}
-
-	/**
-	 * @param nationWideId
-	 *            the nationWideId to set
-	 */
-	public void setNationWideId(String nationWideId) {
-		this.nationWideId = nationWideId;
-	}
-
-	/**
-	 * @return the nationWideIdDate
-	 */
-	public String getNationWideIdDate() {
-		return nationWideIdDate;
-	}
-
-	/**
-	 * @param nationWideIdDate
-	 *            the nationWideIdDate to set
-	 */
-	public void setNationWideIdDate(String nationWideIdDate) {
-		this.nationWideIdDate = nationWideIdDate;
-	}
-
-	/**
-	 * @return the comments
-	 */
-	public String getComments() {
-		return comments;
-	}
-
-	/**
-	 * @param comments
-	 *            the comments to set
-	 */
-	public void setComments(String comments) {
-		this.comments = comments;
-	}
-
-	/**
-	 * @return the status
-	 */
-	public String getStatus() {
-		return status;
-	}
-
-	/**
-	 * @param status
-	 *            the status to set
-	 */
-	public void setStatus(String status) {
-		this.status = status;
-	}
+	@Column(name="TerminatedDate")
+	private Date terminatedDate;
 
 	/**
 	 * @return the empId
 	 */
-	public String getEmpId() {
+	public Integer getEmpId() {
 		return empId;
 	}
 
 	/**
-	 * @param empId
-	 *            the empId to set
+	 * @param empId the empId to set
 	 */
-	public void setEmpId(String empId) {
+	public void setEmpId(Integer empId) {
 		this.empId = empId;
 	}
 
@@ -123,8 +112,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param empFullName
-	 *            the empFullName to set
+	 * @param empFullName the empFullName to set
 	 */
 	public void setEmpFullName(String empFullName) {
 		this.empFullName = empFullName;
@@ -138,8 +126,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param email
-	 *            the email to set
+	 * @param email the email to set
 	 */
 	public void setEmail(String email) {
 		this.email = email;
@@ -153,8 +140,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param firstName
-	 *            the firstName to set
+	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -168,8 +154,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param lastName
-	 *            the lastName to set
+	 * @param lastName the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -178,15 +163,14 @@ public class ResourceDetail implements Serializable {
 	/**
 	 * @return the dateOfBirth
 	 */
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
 	/**
-	 * @param dateOfBirth
-	 *            the dateOfBirth to set
+	 * @param dateOfBirth the dateOfBirth to set
 	 */
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -198,8 +182,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param passportNo
-	 *            the passportNo to set
+	 * @param passportNo the passportNo to set
 	 */
 	public void setPassportNo(String passportNo) {
 		this.passportNo = passportNo;
@@ -213,8 +196,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param teamName
-	 *            the teamName to set
+	 * @param teamName the teamName to set
 	 */
 	public void setTeamName(String teamName) {
 		this.teamName = teamName;
@@ -228,8 +210,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param projName
-	 *            the projName to set
+	 * @param projName the projName to set
 	 */
 	public void setProjName(String projName) {
 		this.projName = projName;
@@ -238,15 +219,14 @@ public class ResourceDetail implements Serializable {
 	/**
 	 * @return the projId
 	 */
-	public String getProjId() {
+	public Integer getProjId() {
 		return projId;
 	}
 
 	/**
-	 * @param projId
-	 *            the projId to set
+	 * @param projId the projId to set
 	 */
-	public void setProjId(String projId) {
+	public void setProjId(Integer projId) {
 		this.projId = projId;
 	}
 
@@ -258,8 +238,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param requester
-	 *            the requester to set
+	 * @param requester the requester to set
 	 */
 	public void setRequester(String requester) {
 		this.requester = requester;
@@ -273,8 +252,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param processor
-	 *            the processor to set
+	 * @param processor the processor to set
 	 */
 	public void setProcessor(String processor) {
 		this.processor = processor;
@@ -288,8 +266,7 @@ public class ResourceDetail implements Serializable {
 	}
 
 	/**
-	 * @param location
-	 *            the location to set
+	 * @param location the location to set
 	 */
 	public void setLocation(String location) {
 		this.location = location;
@@ -298,31 +275,121 @@ public class ResourceDetail implements Serializable {
 	/**
 	 * @return the startDate
 	 */
-	public String getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
 	/**
-	 * @param startDate
-	 *            the startDate to set
+	 * @param startDate the startDate to set
 	 */
-	public void setStartDate(String startDate) {
+	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
 	/**
 	 * @return the endDate
 	 */
-	public String getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 
 	/**
-	 * @param endDate
-	 *            the endDate to set
+	 * @param endDate the endDate to set
 	 */
-	public void setEndDate(String endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
+
+	/**
+	 * @return the nationWideId
+	 */
+	public String getNationWideId() {
+		return nationWideId;
+	}
+
+	/**
+	 * @param nationWideId the nationWideId to set
+	 */
+	public void setNationWideId(String nationWideId) {
+		this.nationWideId = nationWideId;
+	}
+
+	/**
+	 * @return the nationWideIdDate
+	 */
+	public Date getNationWideIdDate() {
+		return nationWideIdDate;
+	}
+
+	/**
+	 * @param nationWideIdDate the nationWideIdDate to set
+	 */
+	public void setNationWideIdDate(Date nationWideIdDate) {
+		this.nationWideIdDate = nationWideIdDate;
+	}
+
+	/**
+	 * @return the comments
+	 */
+	public String getComments() {
+		return comments;
+	}
+
+	/**
+	 * @param comments the comments to set
+	 */
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+
+	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
+
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	/**
+	 * @return the terminated
+	 */
+	public String getTerminated() {
+		return terminated;
+	}
+
+	/**
+	 * @param terminated the terminated to set
+	 */
+	public void setTerminated(String terminated) {
+		this.terminated = terminated;
+	}
+
+	/**
+	 * @return the terminatedDate
+	 */
+	public Date getTerminatedDate() {
+		return terminatedDate;
+	}
+
+	/**
+	 * @param terminatedDate the terminatedDate to set
+	 */
+	public void setTerminatedDate(Date terminatedDate) {
+		this.terminatedDate = terminatedDate;
+	}
+
+	/**
+	 * @return the serialversionuid
+	 */
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 
 }

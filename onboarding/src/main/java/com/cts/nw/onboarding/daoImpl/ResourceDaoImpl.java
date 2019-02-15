@@ -57,7 +57,6 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 	public void update(ResourceDetail domainObject) {
 		try {
 			entityManager.merge(domainObject);
-
 		} catch (Exception e) {
 			throw new OnBoardingException(
 					"Exception in updating " + domainObject.getClass().getName() + " " + e.getMessage(), e);
@@ -132,11 +131,11 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 		return results;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Collection<ResourceDetail> getAll(Class<ResourceDetail> domainClass) {
 		TypedQuery<ResourceDetail> query = (TypedQuery<ResourceDetail>) entityManager
-				.createNamedQuery("ResourceOnboard.findAll");
-
+				.createNamedQuery("ResourceDetail.findAll");
 		try {
 			return query.getResultList();
 		} catch (NoResultException e) {
@@ -146,7 +145,6 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 
 	@Transactional
 	public void delete(ResourceDetail domainObject, Integer id) {
-		// TODO Auto-generated method stub
 		try {
 			domainObject = (ResourceDetail) entityManager.getReference(domainObject.getClass(), id);
 			entityManager.remove(domainObject);
@@ -160,11 +158,13 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 		super.deleteAll(domainObjectList);
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public List executeStoredProc(String storedProcName, String[] fieldArray, ResourceDetail domainObject) {
 		return super.executeStoredProc(storedProcName, fieldArray, domainObject);
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public List executeStoredProc(String storedProcName, String[] fieldArray, HashMap parameterMap) {
 		return super.executeStoredProc(storedProcName, fieldArray, parameterMap);

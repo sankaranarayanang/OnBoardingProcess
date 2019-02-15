@@ -1,5 +1,5 @@
 /**
- * 
+ * Set up the DB Configuration details.
  */
 package com.cts.nw.onboarding.config;
 

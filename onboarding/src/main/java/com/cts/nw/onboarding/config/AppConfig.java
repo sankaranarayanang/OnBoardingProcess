@@ -1,5 +1,5 @@
 /**
- * 
+ * Set up Application Configuration.
  */
 package com.cts.nw.onboarding.config;
 

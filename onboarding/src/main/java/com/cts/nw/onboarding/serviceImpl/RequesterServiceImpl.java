@@ -45,10 +45,10 @@ public class RequesterServiceImpl implements RequesterService {
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public ResourceDetail findResource(ResourceDetail resourceOnboardDO) {
-		//return resourceDao.get((Class<ResourceDetail>) resourceOnboardDO.getClass(),resourceOnboardDO.getEmpId());
-		return null;
+		return resourceDao.get((Class<ResourceDetail>) resourceOnboardDO.getClass(),resourceOnboardDO.getEmpId());
 	}
 
 	@SuppressWarnings("unchecked")
