@@ -33,7 +33,7 @@ public class ListController {
 		List<ResourceDetail> resourceList = resourceRequestService.findAllResources(resource);
 		System.out.println("In List:" + resourceList.size());
 		for(ResourceDetail rd : resourceList){
-			System.out.println("Name:" + rd.getEmpFullName());
+			System.out.println("ID:" + rd.getEmpId());
 		}
 		System.out.println("List Completed");
 		ModelAndView mv = new ModelAndView("resourceList");

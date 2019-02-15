@@ -70,12 +70,20 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
+		
 		<!-- mysql connector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-jdbc-version}</version>
-		</dependency>
+		</dependency> 
+		
+		<!-- mssql connector 
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>7.0.0.jre8</version>
+		</dependency> -->
 
 		<!-- common bean utils -->
 		<dependency>
@@ -83,7 +91,7 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>${commons-beanutils-version}</version>
 		</dependency>
-		
+
 		<!-- JPA (ORM) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
