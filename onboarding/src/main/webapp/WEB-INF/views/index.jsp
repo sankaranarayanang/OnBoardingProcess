@@ -7,14 +7,12 @@
 <title>Resource OnBoarding</title>
 </head>
 <body>
-<h1>Resource OnBoarding</h1>
-	<table>
-		<tr>
-			<td><a href="/onboarding/request">Register</a></td><td></td>
-			<td><a href="/onboarding/approve">Approve</a></td><td></td>
-			<td><a href="/onboarding/terminate">Terminate</a></td>
-			<td><a href="/onboarding/list">List Resources</a></td>
-		</tr>
-	</table>
+<jsp:include page="header.jsp" />
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6" align="right"><button class="btn btn-info" onclick="location.href='/onboarding/request'">Requester</button></div>
+			<div class="col-xs-6"><button class="btn btn-info" onclick="location.href='/onboarding/approve'">Processor</button></div>
+		</div>
+	</div>
 </body>
 </html>
