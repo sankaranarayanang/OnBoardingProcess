@@ -3,12 +3,9 @@
 <head>
 <title>OnBoarding Resources</title>
 
-<link rel="stylesheet"
-	href="./resources/stylesheets/bootstrap.min.css">
-<script
-	src="./resources/scripts/jquery.min.js"></script>
-<script
-	src="./resources/scripts/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./resources/stylesheets/bootstrap.min.css">
+<script src="./resources/scripts/jquery.min.js"></script>
+<script src="./resources/scripts/bootstrap.min.js"></script>
 </head>
 
 <nav class="navbar navbar-inverse ">

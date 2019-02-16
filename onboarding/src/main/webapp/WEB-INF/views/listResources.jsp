@@ -17,7 +17,7 @@
 	<div class="container">
 		<h2>Resources List</h2>
 		<div id="navbar">
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-left">
 				<li class="active"><a href="add">Add User</a></li>
 			</ul>
 		</div>
@@ -29,7 +29,6 @@
 					<th>Email</th>
 					<th>FirstName</th>
 					<th>LastName</th>
-					<th>Email</th>
 					<th>DOB</th>
 					<th>PassportNumber</th>
 					<th>TeamName</th>
@@ -43,7 +42,7 @@
 					<th>NationwideId</th>
 					<th>NationwideIdCreatedDate</th>
 					<th>Comments</th>
-					<th>ApprovalStatus</th>
+					<th>Status</th>
 					<th>TerminatedStatus</th>
 					<th>TerminatedDate</th>
 				</tr>
@@ -51,27 +50,32 @@
 			<c:forEach var="resource" items="${resources}">
 				<tr>
 					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
-					<td>${resource.getEmpId()}</td>
+					<td>${resource.getEmpFullName()}</td>
+					<td>${resource.getEmail()}</td>
+					<td>${resource.getFirstName()}</td>
+					<td>${resource.getLastName()}</td>
+					<td>${resource.getDateOfBirth()}</td>
+					<td>${resource.getPassportNo()}</td>
+					<td>${resource.getTeamName()}</td>
+					<td>${resource.getProjName()}</td>
+					<td>${resource.getProjId()}</td>
+					<td>${resource.getRequester()}</td>
+					<td>${resource.getProcessor()}</td>
+					<td>${resource.getLocation()}</td>
+					<td>${resource.getStartDate()}</td>
+					<td>${resource.getEndDate()}</td>
+					<td>${resource.getNationWideId()}</td>
+					<td>${resource.getNationWideIdDate()}</td>
+					<td>${resource.getComments()}</td>
+					<td>${resource.getStatus()}</td>
+					<td>${resource.getTerminated()}</td>
+					<td>${resource.getTerminatedDate()}</td>
+					<td><button class="btn btn-info"
+							onclick="location.href='show/${resource.getEmpId()}'">Show</button>
+					<td><button class="btn btn-primary"
+							onclick="location.href='update/${resource.getEmpId()}'">Update</button>
+					<td><button class="btn btn-danger"
+							onclick="location.href='delete/${resource.getEmpId()}'">Delete</button>
 				</tr>
 			</c:forEach>
 		</table>

@@ -3,12 +3,15 @@ package com.cts.nw.onboarding.bo;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * @author 656579
@@ -43,6 +46,7 @@ public class ResourceDetail implements Serializable{
 	private String lastName;
 	
 	@Column(name="DOB")
+	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 	
 	@Column(name="PassportNumber")
@@ -67,15 +71,18 @@ public class ResourceDetail implements Serializable{
 	private String location;
 	
 	@Column(name="StartDate")
+	@Temporal(TemporalType.DATE)
 	private Date startDate;
 	
 	@Column(name="EndDate")
+	@Temporal(TemporalType.DATE)
 	private Date endDate;
 	
 	@Column(name="NationwideId")
 	private String nationWideId;
 	
 	@Column(name="NationwideIdCreatedDate")
+	@Temporal(TemporalType.DATE)
 	private Date nationWideIdDate;
 	
 	@Column(name="Comments")

@@ -13,7 +13,9 @@ public interface RequesterService {
 	public void createResource(ResourceDetail resourceOnboardDO);
 	public void updateResource(ResourceDetail resourceOnboardDO);
 	public ResourceDetail editResource(ResourceDetail resourceOnboardDO);
-	public void deleteResource(ResourceDetail resourceOnboardDO);
-	public ResourceDetail findResource(ResourceDetail resourceOnboardDO);
+	//public void deleteResource(ResourceDetail resourceOnboardDO);
+	//public ResourceDetail findResource(ResourceDetail resourceOnboardDO);
 	public List<ResourceDetail> findAllResources(ResourceDetail resourceOnboardDO);
+	ResourceDetail findResource(ResourceDetail resourceOnboardDO, int id);
+	void deleteResource(ResourceDetail resourceOnboardDO, int id);
 }

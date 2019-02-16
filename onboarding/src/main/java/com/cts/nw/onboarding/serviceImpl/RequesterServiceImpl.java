@@ -29,8 +29,7 @@ public class RequesterServiceImpl implements RequesterService {
 
 	@Override
 	public void updateResource(ResourceDetail resourceOnboardDO) {
-		// TODO Auto-generated method stub
-		
+		resourceDao.update(resourceOnboardDO);
 	}
 
 	@Override
@@ -40,15 +39,14 @@ public class RequesterServiceImpl implements RequesterService {
 	}
 
 	@Override
-	public void deleteResource(ResourceDetail resourceOnboardDO) {
-		// TODO Auto-generated method stub
-		
+	public void deleteResource(ResourceDetail resourceOnboardDO, int id) {
+		resourceDao.delete(resourceOnboardDO, id);
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public ResourceDetail findResource(ResourceDetail resourceOnboardDO) {
-		return resourceDao.get((Class<ResourceDetail>) resourceOnboardDO.getClass(),resourceOnboardDO.getEmpId());
+	public ResourceDetail findResource(ResourceDetail resourceOnboardDO, int id) {
+		return resourceDao.get((Class<ResourceDetail>) resourceOnboardDO.getClass(),id);
 	}
 
 	@SuppressWarnings("unchecked")
