@@ -10,8 +10,11 @@
 
 <nav class="navbar navbar-inverse ">
 	<div class="container">
-		<div class="navbar-header" align="center">
-			<h1 class="navbar-brand">OnBoarding Resources</h1>
+		<div class="row">
+			<div class="col-md-7" align="right">
+				<h3 style="color: white;">OnBoarding Resources</h3>
+			</div>
 		</div>
 	</div>
 </nav>
+

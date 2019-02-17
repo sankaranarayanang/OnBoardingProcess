@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
 import com.cts.nw.onboarding.dao.ResourceDao;
-import com.cts.nw.onboarding.service.RequesterService;
+import com.cts.nw.onboarding.service.ResourceService;
 
 /**
  * @author 656579
  *
  */
 @Service
-public class RequesterServiceImpl implements RequesterService {
+public class ResourceServiceImpl implements ResourceService {
 
 	@Autowired
     private ResourceDao resourceDao;
@@ -30,12 +30,6 @@ public class RequesterServiceImpl implements RequesterService {
 	@Override
 	public void updateResource(ResourceDetail resourceOnboardDO) {
 		resourceDao.update(resourceOnboardDO);
-	}
-
-	@Override
-	public ResourceDetail editResource(ResourceDetail resourceOnboardDO) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

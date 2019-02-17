@@ -17,9 +17,6 @@
 	<div class="container">
 		<h2>Resources List</h2>
 		<div id="navbar">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="add">Add User</a></li>
-			</ul>
 			<ul class="nav navbar-nav navbar-left">
 				<li class="active"><a href="/onboarding">Back to home</a></li>
 			</ul>
@@ -75,10 +72,8 @@
 					<td>${resource.getTerminatedDate()}</td>
 					<td><button class="btn btn-info"
 							onclick="location.href='show/${resource.getEmpId()}'">Show</button>
-					<td><button class="btn btn-primary"
-							onclick="location.href='update/${resource.getEmpId()}'">Update</button>
 					<td><button class="btn btn-danger"
-							onclick="location.href='delete/${resource.getEmpId()}'">Delete</button>
+							onclick="location.href='terminate/${resource.getEmpId()}'">Terminate</button>
 				</tr>
 			</c:forEach>
 		</table>
