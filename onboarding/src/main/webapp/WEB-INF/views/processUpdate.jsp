@@ -38,7 +38,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="empFullName"
-							path="empFullName" placeholder="Enter Employee Name" />
+							path="empFullName" placeholder="Enter Employee Name" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="email" path="email"
-							placeholder="Enter Email Id" />
+							placeholder="Enter Email Id" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -60,7 +60,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="firstName" path="firstName"
-							placeholder="Enter First Name" />
+							placeholder="Enter First Name" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="lastName" path="lastName"
-							placeholder="Enter Last Name" />
+							placeholder="Enter Last Name" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -82,7 +82,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="dateOfBirth"
-							path="dateOfBirth" placeholder="Enter Date of Birth" />
+							path="dateOfBirth" placeholder="Enter Date of Birth" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -93,7 +93,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="passportNo"
-							path="passportNo" placeholder="Enter Passport No" />
+							path="passportNo" placeholder="Enter Passport No" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="teamName" path="teamName"
-							placeholder="Enter Team Name" />
+							placeholder="Enter Team Name" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -115,7 +115,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="projName" path="projName"
-							placeholder="Enter Project Name" />
+							placeholder="Enter Project Name" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -126,7 +126,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="projId" path="projId"
-							placeholder="Enter Project Id" />
+							placeholder="Enter Project Id" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -137,7 +137,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="requester" path="requester"
-							placeholder="Enter Requester" />
+							placeholder="Enter Requester" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -148,7 +148,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="processor" path="processor"
-							placeholder="Enter Processor" />
+							placeholder="Enter Processor" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -159,7 +159,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="location" path="location"
-							placeholder="Enter Location" />
+							placeholder="Enter Location" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -170,7 +170,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="startDate" path="startDate"
-							placeholder="Enter Start Date" />
+							placeholder="Enter Start Date" readonly="true"/>
 					</div>
 				</div>
 			</div>
@@ -181,7 +181,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="endDate" path="endDate"
-							placeholder="Enter End Date" />
+							placeholder="Enter End Date" readonly="true"/>
 					</div>
 				</div>
 			</div>
