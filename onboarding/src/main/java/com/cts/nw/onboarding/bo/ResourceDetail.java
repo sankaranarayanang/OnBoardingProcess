@@ -57,7 +57,6 @@ public class ResourceDetail implements Serializable{
 	private String lastName;
 	
 	@Column(name="DOB")
-	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 	
 	@Column(name="PassportNumber")
@@ -82,11 +81,9 @@ public class ResourceDetail implements Serializable{
 	private String location;
 	
 	@Column(name="StartDate")
-	@Temporal(TemporalType.DATE)
 	private Date startDate;
 	
 	@Column(name="EndDate")
-	@Temporal(TemporalType.DATE)
 	private Date endDate;
 	
 	@Column(name="NationwideId")
