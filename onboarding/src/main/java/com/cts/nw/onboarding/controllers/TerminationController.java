@@ -22,7 +22,7 @@ import com.cts.nw.onboarding.service.TerminateService;
  */
 @Controller
 @RequestMapping("/terminate")
-public class TerminationController {
+public class TerminationController extends AbstractController{
 	
 	@Autowired
 	TerminateService terminateService;

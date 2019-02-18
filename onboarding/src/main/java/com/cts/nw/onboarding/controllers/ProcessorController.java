@@ -22,7 +22,7 @@ import com.cts.nw.onboarding.service.ProcessService;
  */
 @Controller
 @RequestMapping("/process")
-public class ProcessorController {
+public class ProcessorController extends AbstractController{
 	
 	@Autowired
 	ProcessService processService;

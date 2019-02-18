@@ -22,11 +22,11 @@ import com.cts.nw.onboarding.service.RequestService;
  */
 @Controller
 @RequestMapping("/request")
-public class RequestController {
+public class RequestController extends AbstractController{
 
 	@Autowired
 	RequestService requestService;
-
+	
 	/**
 	 * Index Method redirects to Resources List Page
 	 * 
