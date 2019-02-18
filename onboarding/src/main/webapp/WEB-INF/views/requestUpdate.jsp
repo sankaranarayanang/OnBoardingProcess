@@ -8,7 +8,7 @@
 <title>Onboarding Resources</title>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="right">
@@ -50,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-				<div class="form-group">
+			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
 						<form:label path="firstName">First Name</form:label>
@@ -189,7 +189,7 @@
 			</div>
 		</form:form>
 	</div>
-
+	<jsp:include page="footer.jsp" />
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 <title>Onboarding Resources</title>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="right">
@@ -35,7 +35,8 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="empFullName"
-							path="empFullName" placeholder="Enter Employee Name" readonly="true"/>
+							path="empFullName" placeholder="Enter Employee Name"
+							readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -46,18 +47,18 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="email" path="email"
-							placeholder="Enter Email Id" readonly="true"/>
+							placeholder="Enter Email Id" readonly="true" />
 					</div>
 				</div>
 			</div>
-				<div class="form-group">
+			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
 						<form:label path="firstName">First Name</form:label>
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="firstName" path="firstName"
-							placeholder="Enter First Name" readonly="true"/>
+							placeholder="Enter First Name" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -68,7 +69,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="lastName" path="lastName"
-							placeholder="Enter Last Name" readonly="true"/>
+							placeholder="Enter Last Name" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -79,7 +80,8 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="dateOfBirth"
-							path="dateOfBirth" placeholder="Enter Date of Birth" readonly="true"/>
+							path="dateOfBirth" placeholder="Enter Date of Birth"
+							readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -90,7 +92,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="passportNo"
-							path="passportNo" placeholder="Enter Passport No" readonly="true"/>
+							path="passportNo" placeholder="Enter Passport No" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -101,7 +103,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="teamName" path="teamName"
-							placeholder="Enter Team Name" readonly="true"/>
+							placeholder="Enter Team Name" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -112,7 +114,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="projName" path="projName"
-							placeholder="Enter Project Name" readonly="true"/>
+							placeholder="Enter Project Name" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -123,7 +125,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="projId" path="projId"
-							placeholder="Enter Project Id" readonly="true"/>
+							placeholder="Enter Project Id" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -134,7 +136,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="requester" path="requester"
-							placeholder="Enter Requester" readonly="true"/>
+							placeholder="Enter Requester" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -145,7 +147,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="processor" path="processor"
-							placeholder="Enter Processor" readonly="true"/>
+							placeholder="Enter Processor" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -156,7 +158,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="location" path="location"
-							placeholder="Enter Location" readonly="true"/>
+							placeholder="Enter Location" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -167,7 +169,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="startDate" path="startDate"
-							placeholder="Enter Start Date" readonly="true"/>
+							placeholder="Enter Start Date" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -178,7 +180,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="endDate" path="endDate"
-							placeholder="Enter End Date" readonly="true"/>
+							placeholder="Enter End Date" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -188,8 +190,9 @@
 						<form:label path="nationWideId">Nationwide Id</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="nationWideId" path="nationWideId"
-							placeholder="Enter Nationwide Id" readonly="true"/>
+						<form:input class="form-control" name="nationWideId"
+							path="nationWideId" placeholder="Enter Nationwide Id"
+							readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -199,8 +202,9 @@
 						<form:label path="nationWideIdDate">Nationwide Id Created Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="nationWideIdDate" path="nationWideIdDate"
-							placeholder="Enter Nationwide Id Created Date" readonly="true"/>
+						<form:input class="form-control" name="nationWideIdDate"
+							path="nationWideIdDate"
+							placeholder="Enter Nationwide Id Created Date" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -211,7 +215,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="comments" path="comments"
-							placeholder="Enter Comments" readonly="true"/>
+							placeholder="Enter Comments" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -222,7 +226,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="status" path="status"
-							placeholder="Enter End Date" readonly="true"/>
+							placeholder="Enter End Date" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -232,8 +236,8 @@
 						<form:label path="terminated">Terminated Status</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="terminated" path="terminated"
-							placeholder="Enter End Date" />
+						<form:input class="form-control" name="terminated"
+							path="terminated" placeholder="Enter End Date" />
 					</div>
 				</div>
 			</div>
@@ -243,8 +247,8 @@
 						<form:label path="terminatedDate">Terminated Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="terminatedDate" path="terminatedDate"
-							placeholder="Enter End Date" />
+						<form:input class="form-control" name="terminatedDate"
+							path="terminatedDate" placeholder="Enter End Date" />
 					</div>
 				</div>
 			</div>
@@ -255,7 +259,6 @@
 			</div>
 		</form:form>
 	</div>
-
+	<jsp:include page="footer.jsp" />
 </body>
-
 </html>

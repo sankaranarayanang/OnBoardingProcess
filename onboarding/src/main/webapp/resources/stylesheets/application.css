@@ -1,0 +1,14 @@
+.logo-style { 
+    max-height: 100px;
+    max-width: 80%; 
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0; 
+}
+
+.footer-style {
+    clear: both;
+    position: relative;
+    height: 40px;
+    margin-top: -40px;
+}

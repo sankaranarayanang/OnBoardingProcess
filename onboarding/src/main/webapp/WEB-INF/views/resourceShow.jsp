@@ -7,7 +7,7 @@
 <title>Onboarding Resources</title>
 </head>
 <body>
-<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="left">
@@ -106,5 +106,6 @@
 			</tr>
 		</table>
 	</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

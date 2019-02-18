@@ -1,20 +1,7 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
-<head>
-<title>OnBoarding Resources</title>
-
-<link rel="stylesheet" href="./resources/stylesheets/bootstrap.min.css">
-<script src="./resources/scripts/jquery.min.js"></script>
-<script src="./resources/scripts/bootstrap.min.js"></script>
-</head>
-
-<nav class="navbar navbar-inverse ">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7" align="right">
-				<h3 style="color: white;">OnBoarding Resources</h3>
-			</div>
-		</div>
-	</div>
-</nav>
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3 footer-style">
+	© 2019 Copyright: <a
+		href="https://en.wikipedia.org/wiki/Nationwide_Mutual_Insurance_Company/">
+		Nationwide.com</a>
+</div>
 

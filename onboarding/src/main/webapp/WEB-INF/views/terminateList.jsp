@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<jsp:include page="header.jsp" />
+	<jsp:include page="header.jsp" />
 	<div class="container">
 		<h2>Resources List</h2>
 		<div id="navbar">
@@ -52,7 +52,8 @@
 					<td>${resource.getEmail()}</td>
 					<td>${resource.getFirstName()}</td>
 					<td>${resource.getLastName()}</td>
-					<td><fmt:formatDate type="date" value="${resource.getDateOfBirth()}"/></td>
+					<td><fmt:formatDate type="date"
+							value="${resource.getDateOfBirth()}" /></td>
 					<td>${resource.getPassportNo()}</td>
 					<td>${resource.getTeamName()}</td>
 					<td>${resource.getProjName()}</td>
@@ -60,14 +61,18 @@
 					<td>${resource.getRequester()}</td>
 					<td>${resource.getProcessor()}</td>
 					<td>${resource.getLocation()}</td>
-					<td><fmt:formatDate type="date" value="${resource.getStartDate()}"/></td>
-					<td><fmt:formatDate type="date" value="${resource.getEndDate()}"/></td>
+					<td><fmt:formatDate type="date"
+							value="${resource.getStartDate()}" /></td>
+					<td><fmt:formatDate type="date"
+							value="${resource.getEndDate()}" /></td>
 					<td>${resource.getNationWideId()}</td>
-					<td><fmt:formatDate type="date" value="${resource.getNationWideIdDate()}"/></td>
+					<td><fmt:formatDate type="date"
+							value="${resource.getNationWideIdDate()}" /></td>
 					<td>${resource.getComments()}</td>
 					<td>${resource.getStatus()}</td>
 					<td>${resource.getTerminated()}</td>
-					<td><fmt:formatDate type="date" value="${resource.getTerminatedDate()}"/></td>
+					<td><fmt:formatDate type="date"
+							value="${resource.getTerminatedDate()}" /></td>
 					<td><button class="btn btn-info"
 							onclick="location.href='show/${resource.getEmpId()}'">Show</button>
 					<td><button class="btn btn-danger"
@@ -76,5 +81,6 @@
 			</c:forEach>
 		</table>
 	</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
