@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"
-	href="../../resources/stylesheets/bootstrap.min.css">
-<script src="../../resources/scripts/jquery.min.js"></script>
-<script src="../../resources/scripts/bootstrap.min.js"></script>
 <title>Onboarding Resources</title>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="left">

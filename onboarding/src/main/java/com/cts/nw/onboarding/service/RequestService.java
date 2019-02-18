@@ -9,7 +9,7 @@ import com.cts.nw.onboarding.bo.ResourceDetail;
  * @author 656579
  *
  */
-public interface ResourceService {
+public interface RequestService {
 	public void createResource(ResourceDetail resourceOnboardDO);
 	public void updateResource(ResourceDetail resourceOnboardDO);
 	void deleteResource(ResourceDetail resourceOnboardDO, int id);

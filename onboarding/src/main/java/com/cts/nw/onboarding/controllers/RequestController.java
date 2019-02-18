@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
-import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
+import com.cts.nw.onboarding.service.RequestService;
 
 /**
  * @author 656579
@@ -25,7 +25,7 @@ import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
 public class RequestController {
 
 	@Autowired
-	ResourceServiceImpl resourceService;
+	RequestService requestService;
 
 	/**
 	 * Index Method redirects to Resources List Page
@@ -47,7 +47,7 @@ public class RequestController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
-		model.addAttribute("resources", resourceService.findAllResources(resource));
+		model.addAttribute("resources", requestService.findAllResources(resource));
 		return "requestList";
 	}
 
@@ -61,7 +61,7 @@ public class RequestController {
 	@RequestMapping(value = "/show/{id}", method = RequestMethod.GET)
 	public String showResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		model.addAttribute("resource", resourceService.findResource(resource, id));
+		model.addAttribute("resource", requestService.findResource(resource, id));
 		return "resourceShow";
 
 	}
@@ -76,7 +76,7 @@ public class RequestController {
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("requestUpdate", "command", resourceService.findResource(resource, id));
+		return new ModelAndView("requestUpdate", "command", requestService.findResource(resource, id));
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public class RequestController {
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public String updateResource(@ModelAttribute("resource") ResourceDetail resource,
 			Model model) {
-		resourceService.updateResource(resource);
+		requestService.updateResource(resource);
 		return "redirect:/request/list";
 	}
 	
@@ -103,7 +103,7 @@ public class RequestController {
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	public String deleteResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		resourceService.deleteResource(resource,id);
+		requestService.deleteResource(resource,id);
 		return "redirect:/request/list";
 	}
 	
@@ -126,7 +126,7 @@ public class RequestController {
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addResource(@ModelAttribute("resource") ResourceDetail resource, ModelMap model) {
-		resourceService.createResource(resource);
+		requestService.createResource(resource);
 		return "redirect:list";
 	}
 

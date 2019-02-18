@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
-import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
+import com.cts.nw.onboarding.service.ProcessService;
 
 /**
  * @author 656579
@@ -25,7 +25,7 @@ import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
 public class ProcessorController {
 	
 	@Autowired
-	ResourceServiceImpl resourceService;
+	ProcessService processService;
 
 	/**
 	 * Index Method redirects to Resources List Page
@@ -47,7 +47,7 @@ public class ProcessorController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
-		model.addAttribute("resources", resourceService.findAllResources(resource));
+		model.addAttribute("resources", processService.findAllResources(resource));
 		return "processList";
 	}
 	
@@ -61,7 +61,7 @@ public class ProcessorController {
 	@RequestMapping(value = "/show/{id}", method = RequestMethod.GET)
 	public String showResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		model.addAttribute("resource", resourceService.findResource(resource, id));
+		model.addAttribute("resource", processService.findResource(resource, id));
 		return "resourceShow";
 
 	}
@@ -76,7 +76,7 @@ public class ProcessorController {
 	@RequestMapping(value = "/approve/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("processUpdate", "command", resourceService.findResource(resource, id));
+		return new ModelAndView("processUpdate", "command", processService.findResource(resource, id));
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public class ProcessorController {
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public String updateResource(@ModelAttribute("resource") ResourceDetail resource,
 			Model model) {
-		resourceService.updateResource(resource);
+		processService.updateResource(resource);
 		return "redirect:/process/list";
 	}
 	

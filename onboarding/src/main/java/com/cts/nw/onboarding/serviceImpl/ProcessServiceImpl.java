@@ -10,31 +10,21 @@ import org.springframework.stereotype.Service;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
 import com.cts.nw.onboarding.dao.ResourceDao;
-import com.cts.nw.onboarding.service.ResourceService;
+import com.cts.nw.onboarding.service.ProcessService;
 
 /**
  * @author 656579
  *
  */
 @Service
-public class ResourceServiceImpl implements ResourceService {
+public class ProcessServiceImpl implements ProcessService {
 
 	@Autowired
     private ResourceDao resourceDao;
 	
 	@Override
-	public void createResource(ResourceDetail resourceOnboardDO) {
-		resourceDao.save(resourceOnboardDO);
-	}
-
-	@Override
 	public void updateResource(ResourceDetail resourceOnboardDO) {
 		resourceDao.update(resourceOnboardDO);
-	}
-
-	@Override
-	public void deleteResource(ResourceDetail resourceOnboardDO, int id) {
-		resourceDao.delete(resourceOnboardDO, id);
 	}
 
 	@SuppressWarnings("unchecked")

@@ -8,12 +8,10 @@
 <html lang="en">
 <head>
 <title>OnBoarding Resources</title>
-<link rel="stylesheet" href="../resources/stylesheets/bootstrap.min.css">
-<script src="../resources/scripts/jquery.min.js"></script>
-<script src="../resources/scripts/bootstrap.min.js"></script>
 </head>
 
 <body>
+<jsp:include page="header.jsp" />
 	<div class="container">
 		<h2>Resources List</h2>
 		<div id="navbar">

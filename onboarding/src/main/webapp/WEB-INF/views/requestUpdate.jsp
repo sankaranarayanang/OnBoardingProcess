@@ -4,14 +4,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="../../resources/stylesheets/bootstrap.min.css">
-<script src="../../resources/scripts/jquery.min.js"></script>
-<script src="../../resources/scripts/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">.js"></script> -->
 <title>Onboarding Resources</title>
 </head>
 <body>
+<jsp:include page="header.jsp" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="right">

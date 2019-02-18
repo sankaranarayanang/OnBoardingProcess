@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
-import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
+import com.cts.nw.onboarding.service.TerminateService;
 
 /**
  * @author 656579
@@ -25,7 +25,7 @@ import com.cts.nw.onboarding.serviceImpl.ResourceServiceImpl;
 public class TerminationController {
 	
 	@Autowired
-	ResourceServiceImpl resourceService;
+	TerminateService terminateService;
 
 	/**
 	 * Index Method redirects to Resources List Page
@@ -47,7 +47,7 @@ public class TerminationController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
-		model.addAttribute("resources", resourceService.findAllResources(resource));
+		model.addAttribute("resources", terminateService.findAllResources(resource));
 		return "terminateList";
 	}
 	
@@ -61,7 +61,7 @@ public class TerminationController {
 	@RequestMapping(value = "/show/{id}", method = RequestMethod.GET)
 	public String showResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		model.addAttribute("resource", resourceService.findResource(resource, id));
+		model.addAttribute("resource", terminateService.findResource(resource, id));
 		return "resourceShow";
 
 	}
@@ -76,7 +76,7 @@ public class TerminationController {
 	@RequestMapping(value = "/terminate/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("terminateUpdate", "command", resourceService.findResource(resource, id));
+		return new ModelAndView("terminateUpdate", "command", terminateService.findResource(resource, id));
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public class TerminationController {
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public String updateResource(@ModelAttribute("resource") ResourceDetail resource,
 			Model model) {
-		resourceService.updateResource(resource);
+		terminateService.updateResource(resource);
 		return "redirect:/terminate/list";
 	}
 }
