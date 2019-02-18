@@ -13,9 +13,10 @@
 	<nav class="navbar navbar-inverse ">
 		<div class="container">
 			<div style="float: left">
-				<img class="logo-style"
+				<a href="/onboarding"> <img class="logo-style"
 					src="/onboarding/resources/images/nationwideLogo.jpg"
 					alt="Nationwide Logo">
+				</a>
 			</div>
 			<div class="row">
 				<div class="col-md-7" align="right">

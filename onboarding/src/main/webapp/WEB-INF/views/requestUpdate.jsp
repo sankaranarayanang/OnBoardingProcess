@@ -1,18 +1,12 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Onboarding Resources</title>
-</head>
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="container">
+	<div class="content-style">
 		<div class="row">
 			<div class="col-md-4" align="right">
-				<h3 style="color: blue;">Update - Form</h3>
+				<h3 style="color: blue;">Resource Update - Form</h3>
 			</div>
 		</div>
 
@@ -191,5 +185,3 @@
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>
-
-</html>

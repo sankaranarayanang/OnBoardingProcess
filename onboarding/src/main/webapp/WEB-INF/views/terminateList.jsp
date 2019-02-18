@@ -4,15 +4,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>OnBoarding Resources</title>
-</head>
-
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="container">
+	<div class="content-style">
 		<h2>Resources List</h2>
 		<div id="navbar">
 			<ul class="nav navbar-nav navbar-left">
@@ -83,4 +77,3 @@
 	</div>
 	<jsp:include page="footer.jsp" />
 </body>
-</html>
