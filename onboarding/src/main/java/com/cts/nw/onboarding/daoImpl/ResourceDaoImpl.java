@@ -143,6 +143,28 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 		}
 	}
 
+	@SuppressWarnings("unchecked")
+	public Collection<ResourceDetail> getAlltoProcess(Class<ResourceDetail> domainClass) {
+		TypedQuery<ResourceDetail> query = (TypedQuery<ResourceDetail>) entityManager
+				.createNamedQuery("ResourceDetail.findAlltoProcess");
+		try {
+			return query.getResultList();
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public Collection<ResourceDetail> getAlltoTerminate(Class<ResourceDetail> domainClass) {
+		TypedQuery<ResourceDetail> query = (TypedQuery<ResourceDetail>) entityManager
+				.createNamedQuery("ResourceDetail.findAlltoTerminate");
+		try {
+			return query.getResultList();
+		} catch (NoResultException e) {
+			return null;
+		}
+	}
+	
 	@Transactional
 	public void delete(ResourceDetail domainObject, Integer id) {
 		try {

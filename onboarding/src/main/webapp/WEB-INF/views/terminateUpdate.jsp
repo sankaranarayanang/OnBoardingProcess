@@ -219,19 +219,25 @@
 						<form:label path="status">Approval Status</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="status" path="status"
-							placeholder="Enter End Date" readonly="true" />
+						<form:select  class="form-control" path="status">
+							<form:option value="New" label="New" selected="selected"/>
+							<form:option value="In Progress" label="In Progress" />
+							<form:option value="Complete" label="Complete" />
+							<form:option value="Closed" label="Closed" />
+						</form:select>
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group" >
 				<div class="row">
 					<div class="col-md-3">
-						<form:label path="terminated">Terminated Status</form:label>
+						<form:label path="terminated">Termination Status</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="terminated"
-							path="terminated" placeholder="Enter End Date" />
+						<form:select class="form-control" path="terminated">
+							<form:option value="No" label="No" selected="selected"/>
+							<form:option value="Yes" label="Yes" />
+						</form:select>
 					</div>
 				</div>
 			</div>

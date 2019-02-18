@@ -36,7 +36,7 @@ public class TerminateServiceImpl implements TerminateService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<ResourceDetail> findAllResources(ResourceDetail resourceOnboardDO) {
-		return (List<ResourceDetail>) resourceDao.getAll((Class<ResourceDetail>) resourceOnboardDO.getClass());
+		return (List<ResourceDetail>) resourceDao.getAlltoTerminate((Class<ResourceDetail>) resourceOnboardDO.getClass());
 	}
 
 }

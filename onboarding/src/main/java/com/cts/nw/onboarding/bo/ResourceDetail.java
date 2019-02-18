@@ -20,7 +20,10 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "RESOURCESMASTER")
 @NamedQueries({
-    @NamedQuery(name = "ResourceDetail.findAll", query = "SELECT r FROM ResourceDetail r")
+    @NamedQuery(name = "ResourceDetail.findAll", query = "SELECT r FROM ResourceDetail r"),
+    @NamedQuery(name = "ResourceDetail.findAlltoProcess", query = "SELECT r FROM ResourceDetail r where r.status='New'"),
+    @NamedQuery(name = "ResourceDetail.findAlltoTerminate", query = "SELECT r FROM ResourceDetail r where r.terminated='No'")
+   
 })
 public class ResourceDetail implements Serializable{
 

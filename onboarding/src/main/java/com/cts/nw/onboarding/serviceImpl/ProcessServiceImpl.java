@@ -36,7 +36,7 @@ public class ProcessServiceImpl implements ProcessService {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<ResourceDetail> findAllResources(ResourceDetail resourceOnboardDO) {
-		return (List<ResourceDetail>) resourceDao.getAll((Class<ResourceDetail>) resourceOnboardDO.getClass());
+		return (List<ResourceDetail>) resourceDao.getAlltoProcess((Class<ResourceDetail>) resourceOnboardDO.getClass());
 	}
 
 }

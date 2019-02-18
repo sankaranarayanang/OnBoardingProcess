@@ -176,6 +176,36 @@
 					</div>
 				</div>
 			</div>
+			<div class="form-group" style="display: none;">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="status">Approval Status</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:select  path="status">
+							<form:option value="New" label="New" selected="selected"/>
+							<form:option value="In Progress" label="In Progress" />
+							<form:option value="Complete" label="Complete" />
+							<form:option value="Closed" label="Closed" />
+						</form:select>
+						<%-- <form:input class="form-control" name="status" path="status"
+							placeholder="Enter End Date" /> --%>
+					</div>
+				</div>
+			</div>
+			<div class="form-group" style="display: none;">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="terminated">Termination Status</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:select  path="terminated">
+							<form:option value="No" label="No" selected="selected"/>
+							<form:option value="Yes" label="Yes" />
+						</form:select>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-4" align="right">
 					<input class="btn btn-info" type="submit" value="Submit" />
