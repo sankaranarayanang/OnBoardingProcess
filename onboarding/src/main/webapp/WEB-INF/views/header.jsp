@@ -1,5 +1,4 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
+<html>
 <head>
 <title>OnBoarding Resources</title>
 
@@ -10,19 +9,20 @@
 <script src="/onboarding/resources/scripts/jquery.min.js"></script>
 <script src="/onboarding/resources/scripts/bootstrap.min.js"></script>
 </head>
-
-<nav class="navbar navbar-inverse ">
-	<div class="container">
-		<div style="float: left">
-			<img class="logo-style"
-				src="/onboarding/resources/images/nationwideLogo.jpg"
-				alt="Nationwide Logo">
-		</div>
-		<div class="row">
-			<div class="col-md-7" align="right">
-				<h3 style="color: white;">OnBoarding Resources</h3>
+<div class="header-style">
+	<nav class="navbar navbar-inverse ">
+		<div class="container">
+			<div style="float: left">
+				<img class="logo-style"
+					src="/onboarding/resources/images/nationwideLogo.jpg"
+					alt="Nationwide Logo">
+			</div>
+			<div class="row">
+				<div class="col-md-7" align="right">
+					<h3 style="color: white;">OnBoarding Resources</h3>
+				</div>
 			</div>
 		</div>
-	</div>
-</nav>
-
+	</nav>
+</div>
+</html>
