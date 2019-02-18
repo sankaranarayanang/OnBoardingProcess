@@ -48,7 +48,7 @@ public class RequestController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
 		model.addAttribute("resources", resourceService.findAllResources(resource));
-		return "listResources";
+		return "requestList";
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class RequestController {
 	public String showResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
 		model.addAttribute("resource", resourceService.findResource(resource, id));
-		return "showResource";
+		return "resourceShow";
 
 	}
 
@@ -76,7 +76,7 @@ public class RequestController {
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("updateForm", "command", resourceService.findResource(resource, id));
+		return new ModelAndView("requestUpdate", "command", resourceService.findResource(resource, id));
 	}
 	
 	/**
@@ -114,7 +114,7 @@ public class RequestController {
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView showRegisterForm() {
-		return new ModelAndView("registerForm", "command", new ResourceDetail());
+		return new ModelAndView("resourceRegister", "command", new ResourceDetail());
 	}
 
 	/**

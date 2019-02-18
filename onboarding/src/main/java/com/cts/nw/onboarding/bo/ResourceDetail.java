@@ -2,6 +2,8 @@ package com.cts.nw.onboarding.bo;
 
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -12,6 +14,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.context.annotation.Bean;
 
 /**
  * @author 656579
@@ -24,11 +28,18 @@ import javax.persistence.TemporalType;
 })
 public class ResourceDetail implements Serializable{
 
+	
+	//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Bean
+    public SimpleDateFormat myDateFormat() {
+        return new SimpleDateFormat("dd/MM/yyyy");
+    }
+	
 	@Id
 	@Column(name="EmployeeId")
 	private Integer empId;
@@ -177,8 +188,12 @@ public class ResourceDetail implements Serializable{
 	/**
 	 * @param dateOfBirth the dateOfBirth to set
 	 */
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setDateOfBirth(String dateOfBirth) {
+		try {
+			this.dateOfBirth =  this.myDateFormat().parse(dateOfBirth);
+		} catch (ParseException e) {
+			this.dateOfBirth =  null;
+		}
 	}
 
 	/**
@@ -289,8 +304,12 @@ public class ResourceDetail implements Serializable{
 	/**
 	 * @param startDate the startDate to set
 	 */
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
+	public void setStartDate(String startDate) {
+		try {
+			this.startDate =  this.myDateFormat().parse(startDate);
+		} catch (ParseException e) {
+			this.startDate =  null;
+		}
 	}
 
 	/**
@@ -303,8 +322,12 @@ public class ResourceDetail implements Serializable{
 	/**
 	 * @param endDate the endDate to set
 	 */
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public void setEndDate(String endDate) {
+		try {
+			this.endDate =  this.myDateFormat().parse(endDate);
+		} catch (ParseException e) {
+			this.endDate =  null;
+		}
 	}
 
 	/**
@@ -331,8 +354,12 @@ public class ResourceDetail implements Serializable{
 	/**
 	 * @param nationWideIdDate the nationWideIdDate to set
 	 */
-	public void setNationWideIdDate(Date nationWideIdDate) {
-		this.nationWideIdDate = nationWideIdDate;
+	public void setNationWideIdDate(String nationWideIdDate) {
+		try {
+			this.nationWideIdDate =  this.myDateFormat().parse(nationWideIdDate);
+		} catch (ParseException e) {
+			this.nationWideIdDate =  null;
+		}
 	}
 
 	/**
@@ -387,8 +414,12 @@ public class ResourceDetail implements Serializable{
 	/**
 	 * @param terminatedDate the terminatedDate to set
 	 */
-	public void setTerminatedDate(Date terminatedDate) {
-		this.terminatedDate = terminatedDate;
+	public void setTerminatedDate(String terminatedDate) {
+		try {
+			this.terminatedDate =  this.myDateFormat().parse(terminatedDate);
+		} catch (ParseException e) {
+			this.terminatedDate =  null;
+		}
 	}
 
 	/**

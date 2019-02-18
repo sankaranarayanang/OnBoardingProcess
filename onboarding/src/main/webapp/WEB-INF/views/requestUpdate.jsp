@@ -5,20 +5,21 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../resources/stylesheets/bootstrap.min.css">
-<script src="../resources/scripts/jquery.min.js"></script>
-<script src="../resources/scripts/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="../../resources/stylesheets/bootstrap.min.css">
+<script src="../../resources/scripts/jquery.min.js"></script>
+<script src="../../resources/scripts/bootstrap.min.js"></script>
 <title>Onboarding Resources</title>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4" align="right">
-				<h3 style="color: blue;">Register - Form</h3>
+				<h3 style="color: blue;">Update - Form</h3>
 			</div>
 		</div>
 
-		<form:form method="POST" action="add">
+		<form:form method="POST" action="../update">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
@@ -26,7 +27,7 @@
 					</div>
 					<div class="col-md-4">
 						<form:input class="form-control" name="empId" path="empId"
-							placeholder="Enter EmployeeID" />
+							placeholder="Enter EmployeeID" readonly="true" />
 					</div>
 				</div>
 			</div>
@@ -52,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-			<%-- 	<div class="form-group">
+				<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
 						<form:label path="firstName">First Name</form:label>
@@ -183,7 +184,7 @@
 							placeholder="Enter End Date" />
 					</div>
 				</div>
-			</div> --%>
+			</div>
 			<div class="row">
 				<div class="col-md-4" align="right">
 					<input class="btn btn-info" type="submit" value="Submit" />

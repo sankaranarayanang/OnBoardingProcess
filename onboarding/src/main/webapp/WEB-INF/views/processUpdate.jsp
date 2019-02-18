@@ -53,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-			<%-- 	<div class="form-group">
+				<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
 						<form:label path="firstName">First Name</form:label>
@@ -184,7 +184,51 @@
 							placeholder="Enter End Date" />
 					</div>
 				</div>
-			</div> --%>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="nationWideId">Nationwide Id</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:input class="form-control" name="nationWideId" path="nationWideId"
+							placeholder="Enter Nationwide Id" />
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="nationWideIdDate">Nationwide Id Created Date</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:input class="form-control" name="nationWideIdDate" path="nationWideIdDate"
+							placeholder="Enter Nationwide Id Created Date" />
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="comments">Comments</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:input class="form-control" name="comments" path="comments"
+							placeholder="Enter Comments" />
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-3">
+						<form:label path="status">Approval Status</form:label>
+					</div>
+					<div class="col-md-4">
+						<form:input class="form-control" name="status" path="status"
+							placeholder="Enter End Date" />
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-4" align="right">
 					<input class="btn btn-info" type="submit" value="Submit" />

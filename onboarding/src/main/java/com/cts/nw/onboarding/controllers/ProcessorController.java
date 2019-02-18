@@ -48,7 +48,7 @@ public class ProcessorController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
 		model.addAttribute("resources", resourceService.findAllResources(resource));
-		return "listProcessResources";
+		return "processList";
 	}
 	
 	/**
@@ -62,7 +62,7 @@ public class ProcessorController {
 	public String showResource(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
 		model.addAttribute("resource", resourceService.findResource(resource, id));
-		return "showResource";
+		return "resourceShow";
 
 	}
 
@@ -76,7 +76,7 @@ public class ProcessorController {
 	@RequestMapping(value = "/approve/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("updateForm", "command", resourceService.findResource(resource, id));
+		return new ModelAndView("processUpdate", "command", resourceService.findResource(resource, id));
 	}
 	
 	/**
