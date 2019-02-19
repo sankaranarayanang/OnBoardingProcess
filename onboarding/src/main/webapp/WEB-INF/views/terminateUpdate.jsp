@@ -22,7 +22,7 @@
 			</div>
 		</div>
 
-		<form:form method="POST" action="../update">
+		<form:form method="POST" action="/onboarding/terminate/update" modelAttribute="resource">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
