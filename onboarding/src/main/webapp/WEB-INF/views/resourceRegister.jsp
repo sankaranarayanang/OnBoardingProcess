@@ -48,6 +48,9 @@
 						<form:input class="form-control" name="empId" path="empId"
 							placeholder="Enter EmployeeID" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="empId" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -59,6 +62,9 @@
 						<form:input class="form-control" name="empFullName"
 							path="empFullName" placeholder="Enter Employee Name" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="empFullName" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -70,6 +76,9 @@
 						<form:input class="form-control" name="email" path="email"
 							placeholder="Enter Email Id" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="email" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -81,6 +90,9 @@
 						<form:input class="form-control" name="firstName" path="firstName"
 							placeholder="Enter First Name" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="firstName" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -92,6 +104,9 @@
 						<form:input class="form-control" name="lastName" path="lastName"
 							placeholder="Enter Last Name" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="lastName" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -104,6 +119,9 @@
 							name="dateOfBirth" path="dateOfBirth"
 							placeholder="Enter Date of Birth" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="dateOfBirth" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -115,6 +133,9 @@
 						<form:input class="form-control" name="passportNo"
 							path="passportNo" placeholder="Enter Passport No" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="passportNo" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -126,6 +147,9 @@
 						<form:input class="form-control" name="teamName" path="teamName"
 							placeholder="Enter Team Name" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="teamName" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -137,6 +161,9 @@
 						<form:input class="form-control" name="projName" path="projName"
 							placeholder="Enter Project Name" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="projName" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -148,6 +175,9 @@
 						<form:input class="form-control" name="projId" path="projId"
 							placeholder="Enter Project Id" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="projId" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -159,6 +189,9 @@
 						<form:input class="form-control" name="requester" path="requester"
 							placeholder="Enter Requester" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="requester" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -170,6 +203,9 @@
 						<form:input class="form-control" name="processor" path="processor"
 							placeholder="Enter Processor" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="processor" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -181,6 +217,9 @@
 						<form:input class="form-control" name="location" path="location"
 							placeholder="Enter Location" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="location" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -192,6 +231,9 @@
 						<form:input autocomplete="off" class="form-control"
 							name="startDate" path="startDate" placeholder="Enter Start Date" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="startDate" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group">
@@ -203,6 +245,9 @@
 						<form:input autocomplete="off" class="form-control" name="endDate"
 							path="endDate" placeholder="Enter End Date" />
 					</div>
+					<div class="col-md-5 has-error">
+                        <form:errors path="endDate" class="help-inline"/>
+                    </div>
 				</div>
 			</div>
 			<div class="form-group" style="display: none;">
@@ -217,8 +262,6 @@
 							<form:option value="Complete" label="Complete" />
 							<form:option value="Closed" label="Closed" />
 						</form:select>
-						<%-- <form:input class="form-control" name="status" path="status"
-							placeholder="Enter End Date" /> --%>
 					</div>
 				</div>
 			</div>

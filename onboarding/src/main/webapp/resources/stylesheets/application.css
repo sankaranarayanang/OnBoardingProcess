@@ -43,3 +43,7 @@ body {
 	overflow: hidden;
 	background-color:#B0E0E6;
 }
+
+.has-error {
+	color: red
+}
