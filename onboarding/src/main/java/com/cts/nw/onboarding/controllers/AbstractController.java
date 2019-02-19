@@ -20,7 +20,7 @@ public class AbstractController {
 
 	@InitBinder
 	public void dataBinding(WebDataBinder binder) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 		dateFormat.setLenient(false);
 		binder.registerCustomEditor(Date.class, "dateOfBirth", new CustomDateEditor(dateFormat, true));
 		binder.registerCustomEditor(Date.class, "startDate", new CustomDateEditor(dateFormat, true));

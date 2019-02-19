@@ -79,7 +79,7 @@ public class RequestController extends AbstractController{
 	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	public ModelAndView showUpdateForm(@ModelAttribute("resource") ResourceDetail resource, @PathVariable("id") int id,
 			Model model) {
-		return new ModelAndView("requestUpdate", "command", requestService.findResource(resource, id));
+		return new ModelAndView("requestUpdate", "resource", requestService.findResource(resource, id));
 	}
 	
 	/**
@@ -90,10 +90,18 @@ public class RequestController extends AbstractController{
 	 * @return
 	 */
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String updateResource(@ModelAttribute("resource") ResourceDetail resource,
-			Model model) {
-		requestService.updateResource(resource);
-		return "redirect:/request/list";
+	public ModelAndView updateResource(@Valid @ModelAttribute("resource") ResourceDetail resource,
+			BindingResult result) {
+		ModelAndView modelAndView = null;
+		if (result.hasErrors()) {
+			modelAndView = new ModelAndView("requestUpdate");
+			return modelAndView;
+		} else {
+			requestService.updateResource(resource);
+			modelAndView = new ModelAndView("detailsSaved");
+		    modelAndView.addObject("resource", requestService.findResource(resource, resource.getEmpId()));
+			return modelAndView;
+		}
 	}
 	
 	/**
@@ -117,40 +125,29 @@ public class RequestController extends AbstractController{
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView showRegisterForm() {
-		return new ModelAndView("resourceRegister", "requestFormKey", new ResourceDetail());
+		return new ModelAndView("resourceRegister", "resource", new ResourceDetail());
 	}
 
 	/**
-	 * Save or Update the Resource
+	 * Save the Resource
 	 * 
 	 * @param resource
 	 * @param model
 	 * @return
 	 */
-	/*@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String addResource(@ModelAttribute("resource") ResourceDetail resource, ModelMap model) {
-		requestService.createResource(resource);
-		return "redirect:list";
-	}*/
-	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public ModelAndView addResource(@Valid @ModelAttribute("requestFormKey") ResourceDetail requestFormKey,
+	public ModelAndView addResource(@Valid @ModelAttribute("resource") ResourceDetail resource,
 			BindingResult result) {
 		ModelAndView modelAndView = null;
 		if (result.hasErrors()) {
-			modelAndView = new ModelAndView("resourceRegister");
+			modelAndView = new ModelAndView("requestUpdate");
 			return modelAndView;
 		} else {
-			modelAndView = new ModelAndView("requestordetailsadded");
-			try {
-				requestService.createResource(requestFormKey);
-				System.out.println("email : " + requestFormKey.getEmail());
-			} catch (Exception e) {
-				System.out.println("Controller error : " + e.getMessage());
-			}
+			requestService.createResource(resource);
+			modelAndView = new ModelAndView("detailsSaved");
+		    modelAndView.addObject("resource", requestService.findResource(resource, resource.getEmpId()));
 			return modelAndView;
 		}
-
 	}
 
 }
