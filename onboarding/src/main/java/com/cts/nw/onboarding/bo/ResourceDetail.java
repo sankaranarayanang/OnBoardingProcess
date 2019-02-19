@@ -38,16 +38,12 @@ public class ResourceDetail implements Serializable{
 	
 	@Id
 	@Column(name="EmployeeId")
-	@NotNull
 	private Integer empId;
 	
 	@Column(name="EmployeeName")
-	@NotNull @NotEmpty @NotBlank
 	private String empFullName;
 	
 	@Column(name="Email")
-	@NotNull @NotEmpty @NotBlank
-	@Email
 	private String email;
 	
 	@Column(name="FirstName")
@@ -57,8 +53,6 @@ public class ResourceDetail implements Serializable{
 	private String lastName;
 	
 	@Column(name="DOB")
-	@NotNull
-	@Past
 	private Date dateOfBirth;
 	
 	@Column(name="PassportNumber")

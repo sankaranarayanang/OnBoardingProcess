@@ -1,15 +1,43 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Resource OnBoarding</title>
+<!-- Load Sytle Sheets -->
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap-datepicker.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/application.css">
+</head>
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="content-style">
+	<div class="container-fluid content-style">
 		<div class="row">
-			<div class="col-md-4" align="right">
-				<h3 style="color: blue;">Requester - Form</h3>
+			<div class="col-md-7">
+				<div class="">
+					<img class="logo-style"
+						src="/onboarding/resources/images/onboardingImage.jpg"
+						alt="Nationwide Logo">
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-3">
+				<div class="">
+					<img class="logo-style"
+						src="/onboarding/resources/images/onboardingPerson.png"
+						alt="Nationwide Logo">
+				</div>
 			</div>
 		</div>
-
+		<div class="row">
+			<div class="col-md-7 text-center" >
+				<h3 style="color: blue;">Register - Form</h3><br/>
+			</div>
+		</div>
 		<form:form method="POST" action="add">
 			<div class="form-group">
 				<div class="row">
@@ -72,8 +100,9 @@
 						<form:label path="dateOfBirth">Date Of Birth</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="dateOfBirth"
-							path="dateOfBirth" placeholder="Enter Date of Birth" />
+						<form:input autocomplete="off" class="form-control"
+							name="dateOfBirth" path="dateOfBirth"
+							placeholder="Enter Date of Birth" />
 					</div>
 				</div>
 			</div>
@@ -160,8 +189,8 @@
 						<form:label path="startDate">Start Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="startDate" path="startDate"
-							placeholder="Enter Start Date" />
+						<form:input autocomplete="off" class="form-control"
+							name="startDate" path="startDate" placeholder="Enter Start Date" />
 					</div>
 				</div>
 			</div>
@@ -171,8 +200,8 @@
 						<form:label path="endDate">End Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="endDate" path="endDate"
-							placeholder="Enter End Date" />
+						<form:input autocomplete="off" class="form-control" name="endDate"
+							path="endDate" placeholder="Enter End Date" />
 					</div>
 				</div>
 			</div>
@@ -182,8 +211,8 @@
 						<form:label path="status">Approval Status</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:select  path="status">
-							<form:option value="New" label="New" selected="selected"/>
+						<form:select path="status">
+							<form:option value="New" label="New" selected="selected" />
 							<form:option value="In Progress" label="In Progress" />
 							<form:option value="Complete" label="Complete" />
 							<form:option value="Closed" label="Closed" />
@@ -199,8 +228,8 @@
 						<form:label path="terminated">Termination Status</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:select  path="terminated">
-							<form:option value="No" label="No" selected="selected"/>
+						<form:select path="terminated">
+							<form:option value="No" label="No" selected="selected" />
 							<form:option value="Yes" label="Yes" />
 						</form:select>
 					</div>
@@ -213,5 +242,11 @@
 			</div>
 		</form:form>
 	</div>
+	<!-- Load Script Files -->
+	<script src="/onboarding/resources/scripts/jquery.min.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap.min.js"></script>
+	<script src="/onboarding/resources/scripts/application.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap-datepicker.min.js"></script>
 	<jsp:include page="footer.jsp" />
 </body>
+</html>

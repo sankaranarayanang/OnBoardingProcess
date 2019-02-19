@@ -1,9 +1,21 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Resource OnBoarding</title>
+<!-- Load Sytle Sheets -->
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap-datepicker.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/application.css">
+</head>
 <body>
 	<jsp:include page="header.jsp" />
-	<div class="content-style">
+	<div class="container-fluid content-style">
 		<div class="row">
 			<div class="col-md-4" align="right">
 				<h3 style="color: blue;">Resource Update - Form</h3>
@@ -72,7 +84,7 @@
 						<form:label path="dateOfBirth">Date Of Birth</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="dateOfBirth"
+						<form:input autocomplete="off" class="form-control" name="dateOfBirth"
 							path="dateOfBirth" placeholder="Enter Date of Birth" />
 					</div>
 				</div>
@@ -160,7 +172,7 @@
 						<form:label path="startDate">Start Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="startDate" path="startDate"
+						<form:input autocomplete="off" class="form-control" name="startDate" path="startDate"
 							placeholder="Enter Start Date" />
 					</div>
 				</div>
@@ -171,7 +183,7 @@
 						<form:label path="endDate">End Date</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="endDate" path="endDate"
+						<form:input autocomplete="off" class="form-control" name="endDate" path="endDate"
 							placeholder="Enter End Date" />
 					</div>
 				</div>
@@ -213,5 +225,11 @@
 			</div>
 		</form:form>
 	</div>
+	<!-- Load Script Files -->
+	<script src="/onboarding/resources/scripts/jquery.min.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap.min.js"></script>
+	<script src="/onboarding/resources/scripts/application.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap-datepicker.min.js"></script>
 	<jsp:include page="footer.jsp" />
 </body>
+</html>
