@@ -4,6 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Resource OnBoarding</title>
+<!-- Load Sytle Sheets -->
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/bootstrap-datepicker.min.css">
+<link rel="stylesheet"
+	href="/onboarding/resources/stylesheets/application.css">
 </head>
 <body>
 	<jsp:include page="header.jsp" />
@@ -23,6 +30,12 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Load Script Files -->
+	<script src="/onboarding/resources/scripts/jquery.min.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap.min.js"></script>
+	<script src="/onboarding/resources/scripts/application.js"></script>
+	<script src="/onboarding/resources/scripts/bootstrap-datepicker.min.js"></script>
 	<jsp:include page="footer.jsp" />
 </body>
 

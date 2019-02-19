@@ -13,6 +13,8 @@
 		<org.hibernate-search-version>4.5.3.Final</org.hibernate-search-version>
 		<commons-beanutils-version>1.8.3</commons-beanutils-version>
 		<mysql-jdbc-version>5.1.9</mysql-jdbc-version>
+		<javax.validation.version>1.1.0.Final</javax.validation.version>
+		<hibernate.validator.version>5.1.2.Final</hibernate.validator.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,20 +72,16 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-		
+
 		<!-- mysql connector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-jdbc-version}</version>
-		</dependency> 
-		
-		<!-- mssql connector 
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
-			<version>7.0.0.jre8</version>
-		</dependency> -->
+		</dependency>
+
+		<!-- mssql connector <dependency> <groupId>com.microsoft.sqlserver</groupId> 
+			<artifactId>mssql-jdbc</artifactId> <version>7.0.0.jre8</version> </dependency> -->
 
 		<!-- common bean utils -->
 		<dependency>
@@ -103,7 +101,16 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
