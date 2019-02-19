@@ -49,9 +49,11 @@ public class ResourceDetail implements Serializable{
 	private String email;
 	
 	@Column(name="FirstName")
+	@NotNull @NotBlank @NotEmpty
 	private String firstName;
 	
 	@Column(name="LastName")
+	@NotNull @NotBlank @NotEmpty
 	private String lastName;
 	
 	@Column(name="DOB")
@@ -60,9 +62,11 @@ public class ResourceDetail implements Serializable{
 	private Date dateOfBirth;
 	
 	@Column(name="PassportNumber")
+	@NotNull @NotBlank @NotEmpty
 	private String passportNo;
 	
 	@Column(name="TeamName")
+	@NotNull @NotBlank @NotEmpty
 	private String teamName;
 	
 	@Column(name="ProjectName")
