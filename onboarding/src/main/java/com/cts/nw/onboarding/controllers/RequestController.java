@@ -3,10 +3,13 @@
  */
 package com.cts.nw.onboarding.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -114,7 +117,7 @@ public class RequestController extends AbstractController{
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView showRegisterForm() {
-		return new ModelAndView("resourceRegister", "command", new ResourceDetail());
+		return new ModelAndView("resourceRegister", "requestFormKey", new ResourceDetail());
 	}
 
 	/**
@@ -124,10 +127,30 @@ public class RequestController extends AbstractController{
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String addResource(@ModelAttribute("resource") ResourceDetail resource, ModelMap model) {
 		requestService.createResource(resource);
 		return "redirect:list";
+	}*/
+	
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public ModelAndView addResource(@Valid @ModelAttribute("requestFormKey") ResourceDetail requestFormKey,
+			BindingResult result) {
+		ModelAndView modelAndView = null;
+		if (result.hasErrors()) {
+			modelAndView = new ModelAndView("resourceRegister");
+			return modelAndView;
+		} else {
+			modelAndView = new ModelAndView("requestordetailsadded");
+			try {
+				requestService.createResource(requestFormKey);
+				System.out.println("email : " + requestFormKey.getEmail());
+			} catch (Exception e) {
+				System.out.println("Controller error : " + e.getMessage());
+			}
+			return modelAndView;
+		}
+
 	}
 
 }

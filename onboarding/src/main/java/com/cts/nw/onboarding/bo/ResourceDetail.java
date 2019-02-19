@@ -15,7 +15,6 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
-import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -38,12 +37,15 @@ public class ResourceDetail implements Serializable{
 	
 	@Id
 	@Column(name="EmployeeId")
+	@NotNull
 	private Integer empId;
 	
 	@Column(name="EmployeeName")
+	@NotNull @NotBlank @NotEmpty
 	private String empFullName;
 	
 	@Column(name="Email")
+	@NotNull @NotBlank @NotEmpty
 	private String email;
 	
 	@Column(name="FirstName")
@@ -53,6 +55,8 @@ public class ResourceDetail implements Serializable{
 	private String lastName;
 	
 	@Column(name="DOB")
+	@NotNull
+	@Past
 	private Date dateOfBirth;
 	
 	@Column(name="PassportNumber")

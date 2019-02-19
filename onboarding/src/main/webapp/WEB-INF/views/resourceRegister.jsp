@@ -38,7 +38,7 @@
 				<h3 style="color: blue;">Register - Form</h3><br/>
 			</div>
 		</div>
-		<form:form method="POST" action="add">
+		<form:form method="POST" action="add" modelAttribute="requestFormKey">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
