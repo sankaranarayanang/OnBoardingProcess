@@ -3,18 +3,51 @@
  */
 package com.cts.nw.onboarding.bo;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
 /**
  * @author 656579
  *
  */
-public class ProjectDetail {
+@Entity
+@Table(name = "ProjectDetails")
+@NamedQueries({
+    @NamedQuery(name = "ProjectDetail.findAllProject", query = "SELECT r FROM ProjectDetail r"),
+    @NamedQuery(name = "ProjectDetail.findProject", query = "SELECT r FROM ProjectDetail r where r.projectName = :projectName ")
+})
+public class ProjectDetail implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@Column(name="ProjectName")
 	private String projectName;
+	
+	@Column(name="ProjectId")
 	private Integer projectId;
+	
+	@Column(name="RequestorId")
 	private Integer requesterID;
+	
+	@Column(name="RequestorName")
 	private String requesterName;
+	
+	@Column(name="ProcessorId")
 	private Integer approverID;
+	
+	@Column(name="ProcessorName")
 	private String approverName;
+	
 	/**
 	 * @return the projectName
 	 */

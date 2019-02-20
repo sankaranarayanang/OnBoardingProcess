@@ -158,8 +158,10 @@
 						<form:label path="projName">Project Name</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="projName" path="projName"
-							placeholder="Enter Project Name" />
+						<form:select id="projName" path="projName" class="form-control" onchange="loadProjDetails()">
+							<form:option value="Nationwide Promise2020 TPP" label="Nationwide Promise2020 TPP"/>
+							<form:option value="Nationw-Back office processing" label="Nationw-Back office processing"  selected="selected"  />
+						</form:select>
 					</div>
 					<div class="col-md-5 has-error">
                         <form:errors path="projName" class="help-inline"/>
@@ -169,10 +171,10 @@
 			<div class="form-group">
 				<div class="row">
 					<div class="col-md-3">
-						<form:label path="projId">Project Id</form:label>
+						<form:label  path="projId">Project Id</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="projId" path="projId"
+						<form:input id="projId" class="form-control" name="projId" path="projId"
 							placeholder="Enter Project Id" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -186,7 +188,7 @@
 						<form:label path="requester">Requester</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="requester" path="requester"
+						<form:input id="requester" class="form-control" name="requester" path="requester"
 							placeholder="Enter Requester" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -200,7 +202,7 @@
 						<form:label path="processor">Processor</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="processor" path="processor"
+						<form:input id="processor" class="form-control" name="processor" path="processor"
 							placeholder="Enter Processor" />
 					</div>
 					<div class="col-md-5 has-error">
