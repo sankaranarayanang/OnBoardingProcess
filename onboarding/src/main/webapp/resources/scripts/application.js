@@ -33,3 +33,23 @@ function loadProjDetails() {
 		}
 	});
 }
+
+$('#empId').blur(function() {
+	loadEmployeeDetails();
+});
+
+function loadEmployeeDetails() {
+	var empId = $('#empId').val();
+	$.ajax({
+		type : 'GET',
+		url : "/onboarding/resource/getEmployee?empId=" + empId,
+		dataType : "text",
+		success : function(resultData) {
+			var returnedData = JSON.parse(resultData);
+			$('#empFullName').val(returnedData.name);
+			$('#email').val(returnedData.emailId);
+			$('#firstName').val(returnedData.name.split(" ")[0]);
+			$('#lastName').val(returnedData.name.split(" ")[1]);
+		}
+	});
+}

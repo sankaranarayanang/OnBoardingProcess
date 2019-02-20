@@ -45,7 +45,7 @@
 						<form:label path="empId">Employee Id(Cognizant)</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="empId" path="empId"
+						<form:input class="form-control" name="empId" path="empId" id="empId" onblur="loadEmployeeDetails()"
 							placeholder="Enter EmployeeID" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -59,7 +59,7 @@
 						<form:label path="empFullName">Employee Name</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="empFullName"
+						<form:input class="form-control" id="empFullName" name="empFullName"
 							path="empFullName" placeholder="Enter Employee Name" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -73,7 +73,7 @@
 						<form:label path="email">Email</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="email" path="email"
+						<form:input class="form-control" id="email" name="email" path="email"
 							placeholder="Enter Email Id" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -87,7 +87,7 @@
 						<form:label path="firstName">First Name</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="firstName" path="firstName"
+						<form:input class="form-control" id="firstName" name="firstName" path="firstName"
 							placeholder="Enter First Name" />
 					</div>
 					<div class="col-md-5 has-error">
@@ -101,7 +101,7 @@
 						<form:label path="lastName">Last Name</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:input class="form-control" name="lastName" path="lastName"
+						<form:input class="form-control" id="lastName" name="lastName" path="lastName"
 							placeholder="Enter Last Name" />
 					</div>
 					<div class="col-md-5 has-error">
