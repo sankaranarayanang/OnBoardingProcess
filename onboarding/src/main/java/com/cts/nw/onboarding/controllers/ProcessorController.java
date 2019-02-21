@@ -50,7 +50,8 @@ public class ProcessorController extends AbstractController{
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
-		model.addAttribute("resources", processService.findAllResources(resource));
+		String processor = "Palat,Harikumar";
+		model.addAttribute("resources", processService.findAllResources(resource,processor) );
 		return "processList";
 	}
 	

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -16,17 +16,27 @@
 	<jsp:include page="header.jsp" />
 	<div class="content-style">
 		<div class="row">
-			<div class="col-xs-4" align="right">
+			<div class="col-xs-8" >
+				<h3>Welcome ${user}</h3>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-xs-2" align="right">
 				<button class="btn btn-info"
 					onclick="location.href='/onboarding/request'">Request</button>
 			</div>
-			<div class="col-xs-4" align="center">
+			<div class="col-xs-3" align="right">
 				<button class="btn btn-info"
 					onclick="location.href='/onboarding/process'">Process</button>
 			</div>
-			<div class="col-xs-4" align="left">
+			<div class="col-xs-3" align="right">
 				<button class="btn btn-info"
 					onclick="location.href='/onboarding/terminate'">Terminate</button>
+			</div>
+			<div class="col-xs-3" align="right">
+				<button class="btn btn-info"
+					onclick="location.href='/onboarding/project'">Project Details</button>
 			</div>
 		</div>
 	</div>

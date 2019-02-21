@@ -34,4 +34,25 @@ public class ProjectServiceImpl implements ProjectService{
 		return (ProjectDetail) projectDAO.findProject((Class<ProjectDetail>) projectDetailDO.getClass(), projName);
 	}
 
+	@Override
+	public void createProject(ProjectDetail project) {
+		projectDAO.save(project);		
+	}
+
+	@Override
+	public void deleteProject(ProjectDetail project, int id) {
+		projectDAO.delete(project, id);	
+	}
+
+	@Override
+	public void updateProject(ProjectDetail project) {
+		projectDAO.update(project);		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Object findProjectwithID(ProjectDetail project, int id) {
+		return projectDAO.get((Class<ProjectDetail>) project.getClass(),id);
+	}
+
 }

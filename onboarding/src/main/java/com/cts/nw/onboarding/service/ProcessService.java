@@ -11,7 +11,7 @@ import com.cts.nw.onboarding.bo.ResourceDetail;
  */
 public interface ProcessService {
 	public void updateResource(ResourceDetail resourceOnboardDO);
-	public List<ResourceDetail> findAllResources(ResourceDetail resourceOnboardDO);
+	public List<ResourceDetail> findAllResources(ResourceDetail resourceOnboardDO,String processor);
 	ResourceDetail findResource(ResourceDetail resourceOnboardDO, int id);
 	
 }

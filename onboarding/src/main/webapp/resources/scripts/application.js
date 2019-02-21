@@ -23,7 +23,7 @@ function loadProjDetails() {
 	var projName = $('#projName').val();
 	$.ajax({
 		type : 'GET',
-		url : "/onboarding/projectdetails?name=" + projName,
+		url : "/onboarding/project/details?name=" + projName,
 		dataType : "text",
 		success : function(resultData) {
 			var returnedData = JSON.parse(resultData);

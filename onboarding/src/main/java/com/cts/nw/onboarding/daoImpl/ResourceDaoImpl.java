@@ -144,9 +144,10 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 	}
 
 	@SuppressWarnings("unchecked")
-	public Collection<ResourceDetail> getAlltoProcess(Class<ResourceDetail> domainClass) {
+	public Collection<ResourceDetail> getAlltoProcess(Class<ResourceDetail> domainClass,String processorName) {
 		TypedQuery<ResourceDetail> query = (TypedQuery<ResourceDetail>) entityManager
 				.createNamedQuery("ResourceDetail.findAlltoProcess");
+		query.setParameter("processor", processorName);
 		try {
 			return query.getResultList();
 		} catch (NoResultException e) {

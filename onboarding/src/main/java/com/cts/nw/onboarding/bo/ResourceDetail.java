@@ -26,7 +26,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "RESOURCESMASTER")
 @NamedQueries({
     @NamedQuery(name = "ResourceDetail.findAll", query = "SELECT r FROM ResourceDetail r"),
-    @NamedQuery(name = "ResourceDetail.findAlltoProcess", query = "SELECT r FROM ResourceDetail r where r.status='New'"),
+    @NamedQuery(name = "ResourceDetail.findAlltoProcess", query = "SELECT r FROM ResourceDetail r where r.status='New' AND r.processor = :processor"),
     @NamedQuery(name = "ResourceDetail.findAlltoTerminate", query = "SELECT r FROM ResourceDetail r where r.terminated='No'")
    
 })

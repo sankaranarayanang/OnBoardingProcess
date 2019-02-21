@@ -59,6 +59,37 @@ public class ProjectDetailDAOImpl extends BaseJPA<ProjectDetail> implements Proj
 		}
 	}
 	
+	
+	@Transactional
+	public void save(ProjectDetail domainObject) {
+		try {
+			entityManager.persist(domainObject);
+		} catch (Exception e) {
+			throw new OnBoardingException(
+					"Exception saving " + domainObject.getClass().getName() + " " + e.getMessage(), e);
+		}
+	}
+
+	@Transactional
+	public void update(ProjectDetail domainObject) {
+		try {
+			entityManager.merge(domainObject);
+		} catch (Exception e) {
+			throw new OnBoardingException(
+					"Exception in updating " + domainObject.getClass().getName() + " " + e.getMessage(), e);
+		}
+	}
+	
+	@Transactional
+	public void delete(ProjectDetail domainObject, Integer id) {
+		try {
+			domainObject = (ProjectDetail) entityManager.getReference(domainObject.getClass(), id);
+			entityManager.remove(domainObject);
+		} catch (Exception e) {
+			throw new OnBoardingException("Exception deleting " + domainObject.getClass().getName(), e);
+		}
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public ProjectDetail findProject(Class<ProjectDetail> projectDetail, String projectName) {

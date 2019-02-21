@@ -11,6 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * @author 656579
@@ -29,10 +33,12 @@ public class ProjectDetail implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	
 	@Column(name="ProjectName")
+	@NotNull @NotBlank @NotEmpty
 	private String projectName;
 	
+	@Id
 	@Column(name="ProjectId")
 	private Integer projectId;
 	
@@ -40,12 +46,14 @@ public class ProjectDetail implements Serializable{
 	private Integer requesterID;
 	
 	@Column(name="RequestorName")
+	@NotNull @NotBlank @NotEmpty
 	private String requesterName;
 	
 	@Column(name="ProcessorId")
 	private Integer approverID;
 	
 	@Column(name="ProcessorName")
+	@NotNull @NotBlank @NotEmpty
 	private String approverName;
 	
 	/**
