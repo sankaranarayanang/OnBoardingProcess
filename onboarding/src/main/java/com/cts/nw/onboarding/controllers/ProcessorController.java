@@ -18,6 +18,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.cts.nw.onboarding.bo.ResourceDetail;
 import com.cts.nw.onboarding.service.ProcessService;
+import com.cts.nw.onboarding.util.Employee;
+import com.cts.nw.onboarding.util.LDAPUtil;
 
 /**
  * @author 656579
@@ -50,8 +52,9 @@ public class ProcessorController extends AbstractController{
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listAllResources(@ModelAttribute("resources") ResourceDetail resource, ModelMap model) {
-		String processor = "Palat,Harikumar";
-		model.addAttribute("resources", processService.findAllResources(resource,processor) );
+		String processor = System.getProperty("user.name");
+		Employee employee = new LDAPUtil().getEmployee("sAMAccountName", processor);
+		model.addAttribute("resources", processService.findAllResources(resource,employee.getName()) );
 		return "processList";
 	}
 	

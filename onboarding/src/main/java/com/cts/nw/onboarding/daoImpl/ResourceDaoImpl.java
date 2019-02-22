@@ -198,13 +198,11 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 	public List executeQuery(String queryName, String[] fieldArray, HashMap parameterMap) {
 		try {
 			List results = new ArrayList();
-			System.out.println("entityManager:" + queryName);
 			Query query = entityManager.createNativeQuery(queryName);
 			List<ResourceDetail> resultlist = new ArrayList<ResourceDetail>();
 
 			int i = 1;
 			for (Object key : parameterMap.keySet()) {
-				System.out.println("key:" + key);
 				Object value = parameterMap.get(key);
 				if (value != null) {
 					try {
@@ -223,7 +221,6 @@ public class ResourceDaoImpl extends BaseJPA<ResourceDetail> implements Resource
 			if ((resultlist.size() > 0) && (fieldArray != null)) {
 				Object[][] requestobj = (Object[][]) resultlist.toArray(new Object[resultlist.size()][]);
 
-				System.out.println("requestobj:" + requestobj);
 				for (int k = 0; k < requestobj.length; k++) {
 					HashMap resultmap = new HashMap();
 					for (int j = 0; j < requestobj[k].length; j++) {

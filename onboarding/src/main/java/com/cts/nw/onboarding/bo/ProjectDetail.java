@@ -21,7 +21,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  */
 @Entity
-@Table(name = "ProjectDetails")
+@Table(name = "PROJECTDETAILS")
 @NamedQueries({
     @NamedQuery(name = "ProjectDetail.findAllProject", query = "SELECT r FROM ProjectDetail r"),
     @NamedQuery(name = "ProjectDetail.findProject", query = "SELECT r FROM ProjectDetail r where r.projectName = :projectName ")
@@ -34,26 +34,26 @@ public class ProjectDetail implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	
-	@Column(name="ProjectName")
-	@NotNull @NotBlank @NotEmpty
+	@Column(name="PROJECTNAME")
+	//@NotNull @NotBlank @NotEmpty
 	private String projectName;
 	
 	@Id
-	@Column(name="ProjectId")
+	@Column(name="PROJECTID")
 	private Integer projectId;
 	
-	@Column(name="RequestorId")
+	@Column(name="REQUESTERID")
 	private Integer requesterID;
 	
-	@Column(name="RequestorName")
+	@Column(name="REQUESTERNAME")
 	@NotNull @NotBlank @NotEmpty
 	private String requesterName;
 	
-	@Column(name="ProcessorId")
+	@Column(name="PROCESSORID")
 	private Integer approverID;
 	
-	@Column(name="ProcessorName")
-	@NotNull @NotBlank @NotEmpty
+	@Column(name="PROCESSORNAME")
+	//@NotNull @NotBlank @NotEmpty
 	private String approverName;
 	
 	/**

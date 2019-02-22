@@ -13,7 +13,7 @@
 <link rel="stylesheet"
 	href="/onboarding/resources/stylesheets/application.css">
 </head>
-<body>
+<body onload="loadProjNames();">
 	<jsp:include page="header.jsp" />
 	<div class="container-fluid content-style">
 		<div class="row">
@@ -158,14 +158,13 @@
 						<form:label path="projName">Project Name</form:label>
 					</div>
 					<div class="col-md-4">
-						<form:select id="projName" path="projName" class="form-control" onchange="loadProjDetails()">
-							<form:option value="Nationwide Promise2020 TPP" label="Nationwide Promise2020 TPP"/>
-							<form:option value="Nationw-Back office processing" label="Nationw-Back office processing"  selected="selected"  />
+						<form:select id="projName" path="projName" class="form-control"
+							onchange="loadProjDetails()">
 						</form:select>
 					</div>
 					<div class="col-md-5 has-error">
-                        <form:errors path="projName" class="help-inline"/>
-                    </div>
+						<form:errors path="projName" class="help-inline" />
+					</div>
 				</div>
 			</div>
 			<div class="form-group">

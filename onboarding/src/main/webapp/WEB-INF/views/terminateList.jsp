@@ -29,17 +29,17 @@
 				<tr>
 					<th>EmployeeId</th>
 					<th>EmployeeName</th>
-					<th>Email</th>
+					<!-- <th>Email</th>
 					<th>FirstName</th>
 					<th>LastName</th>
 					<th>DOB</th>
 					<th>PassportNumber</th>
-					<th>TeamName</th>
+					<th>TeamName</th> -->
 					<th>ProjectName</th>
 					<th>ProjectId</th>
 					<th>Requester</th>
 					<th>Processor</th>
-					<th>Location</th>
+					<!-- <th>Location</th>
 					<th>StartDate</th>
 					<th>EndDate</th>
 					<th>NationwideId</th>
@@ -47,25 +47,25 @@
 					<th>Comments</th>
 					<th>Status</th>
 					<th>TerminatedStatus</th>
-					<th>TerminatedDate</th>
+					<th>TerminatedDate</th> -->
 				</tr>
 			</thead>
 			<c:forEach var="resource" items="${resources}">
 				<tr>
 					<td>${resource.getEmpId()}</td>
 					<td>${resource.getEmpFullName()}</td>
-					<td>${resource.getEmail()}</td>
+					<%-- <td>${resource.getEmail()}</td>
 					<td>${resource.getFirstName()}</td>
 					<td>${resource.getLastName()}</td>
 					<td><fmt:formatDate type="date"
 							value="${resource.getDateOfBirth()}" /></td>
 					<td>${resource.getPassportNo()}</td>
-					<td>${resource.getTeamName()}</td>
+					<td>${resource.getTeamName()}</td> --%>
 					<td>${resource.getProjName()}</td>
 					<td>${resource.getProjId()}</td>
 					<td>${resource.getRequester()}</td>
 					<td>${resource.getProcessor()}</td>
-					<td>${resource.getLocation()}</td>
+					<%-- <td>${resource.getLocation()}</td>
 					<td><fmt:formatDate type="date"
 							value="${resource.getStartDate()}" /></td>
 					<td><fmt:formatDate type="date"
@@ -77,7 +77,7 @@
 					<td>${resource.getStatus()}</td>
 					<td>${resource.getTerminated()}</td>
 					<td><fmt:formatDate type="date"
-							value="${resource.getTerminatedDate()}" /></td>
+							value="${resource.getTerminatedDate()}" /></td> --%>
 					<td><button class="btn btn-info"
 							onclick="location.href='show/${resource.getEmpId()}'">Show</button>
 					<td><button class="btn btn-danger"

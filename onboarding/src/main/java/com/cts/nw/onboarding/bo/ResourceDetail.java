@@ -3,6 +3,7 @@ package com.cts.nw.onboarding.bo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,23 +37,23 @@ public class ResourceDetail implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="EmployeeId")
+	@Column(name="EMPLOYEEID")
 	@NotNull
 	private Integer empId;
 	
-	@Column(name="EmployeeName")
+	@Column(name="EMPLOYEENAME")
 	@NotNull @NotBlank @NotEmpty
 	private String empFullName;
 	
-	@Column(name="Email")
+	@Column(name="EMAIL")
 	@NotNull @NotBlank @NotEmpty
 	private String email;
 	
-	@Column(name="FirstName")
+	@Column(name="FIRSTNAME")
 	@NotNull @NotBlank @NotEmpty
 	private String firstName;
 	
-	@Column(name="LastName")
+	@Column(name="LASTNAME")
 	@NotNull @NotBlank @NotEmpty
 	private String lastName;
 	
@@ -61,52 +62,52 @@ public class ResourceDetail implements Serializable{
 	@Past
 	private Date dateOfBirth;
 	
-	@Column(name="PassportNumber")
+	@Column(name="PASSPORTNUMBER")
 	@NotNull @NotBlank @NotEmpty
 	private String passportNo;
 	
-	@Column(name="TeamName")
+	@Column(name="TEAMNAME")
 	@NotNull @NotBlank @NotEmpty
 	private String teamName;
 	
-	@Column(name="ProjectName")
+	@Column(name="PROJECTNAME")
 	private String projName;
 	
-	@Column(name="ProjectId")
+	@Column(name="PROJECTID")
 	private Integer projId;
 	
-	@Column(name="Requester")
+	@Column(name="REQUESTER")
 	private String requester;
 	
-	@Column(name="Processor")
+	@Column(name="PROCESSOR")
 	private String processor;
 	
-	@Column(name="Location")
+	@Column(name="LOCATION")
 	private String location;
 	
-	@Column(name="StartDate")
+	@Column(name="STARTDATE")
 	private Date startDate;
 	
-	@Column(name="EndDate")
+	@Column(name="ENDDATE")
 	private Date endDate;
 	
-	@Column(name="NationwideId")
+	@Column(name="NATIONWIDEID")
 	private String nationWideId;
 	
-	@Column(name="NationwideIdCreatedDate")
+	@Column(name="NATIONWIDEIDCREATEDDATE")
 	@Temporal(TemporalType.DATE)
 	private Date nationWideIdDate;
 	
-	@Column(name="Comments")
+	@Column(name="COMMENTS")
 	private String comments;
 	
-	@Column(name="ApprovalStatus")
+	@Column(name="APPROVALSTATUS")
 	private String status;
 	
-	@Column(name="TerminatedStatus")
+	@Column(name="TERMINATEDSTATUS")
 	private String terminated;
 
-	@Column(name="TerminatedDate")
+	@Column(name="TERMINATEDDATE")
 	private Date terminatedDate;
 
 	/**

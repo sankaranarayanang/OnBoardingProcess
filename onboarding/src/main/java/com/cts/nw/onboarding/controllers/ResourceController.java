@@ -23,8 +23,6 @@ public class ResourceController {
 	@RequestMapping(value = "/getEmployee", method = RequestMethod.GET)
     public @ResponseBody Employee index(@RequestParam("empId") String empId) {
            Employee employee = new LDAPUtil().getEmployee("sAMAccountName", empId);
-           System.out.println("AJAX input is " + empId);
-           System.out.println("AJAX output is " + employee.getEmailId());
            return employee;
     }
 

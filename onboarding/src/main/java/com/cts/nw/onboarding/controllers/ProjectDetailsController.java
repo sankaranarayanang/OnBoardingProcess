@@ -3,6 +3,8 @@
  */
 package com.cts.nw.onboarding.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +61,12 @@ public class ProjectDetailsController {
 	@RequestMapping(value = "/details", method = RequestMethod.GET)
 	public @ResponseBody ProjectDetail index(@RequestParam("name") String projName,@ModelAttribute("projects") ProjectDetail project) {
 		ProjectDetail projectDetail  =  projectService.findProject(project,projName);
+		return projectDetail;
+	}
+	
+	@RequestMapping(value = "/names", method = RequestMethod.GET)
+	public @ResponseBody List<ProjectDetail> projNames(@ModelAttribute("projects") ProjectDetail project) {
+		List<ProjectDetail> projectDetail  =  projectService.findAllProjects(project);
 		return projectDetail;
 	}
 	

@@ -18,11 +18,11 @@ public class LDAPUtil {
 	public static void main(String[] args) {
 		try{
 		Employee employee = new LDAPUtil().getEmployee("sAMAccountName", "SNWAdmin");
-		System.out.println("Email id  " + employee.getEmailId());
+		/*System.out.println("Email id  " + employee.getEmailId());
 		System.out.println("Designation " + employee.getDesignation());
 		System.out.println("Distinguished name " + employee.getDistinguishedName());
 		System.out.println("Name " + employee.getName());
-		System.out.println("ID  " + employee.getAssociateId());
+		System.out.println("ID  " + employee.getAssociateId());*/
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());

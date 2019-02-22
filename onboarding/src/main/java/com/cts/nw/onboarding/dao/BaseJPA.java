@@ -49,7 +49,6 @@ public abstract class BaseJPA<T>  implements AbstractDAO<T> {
 	@Transactional
 	public void save(T domainObject) {
 		try {	
-			System.out.println("Base JPA");
 			entityManager.persist(domainObject);
 		} catch (Exception e) {
 			throw new OnBoardingException("Exception saving "

@@ -30,6 +30,7 @@ public class RequestController extends AbstractController{
 	@Autowired
 	RequestService requestService;
 	
+	
 	/**
 	 * Index Method redirects to Resources List Page
 	 * 
@@ -125,7 +126,8 @@ public class RequestController extends AbstractController{
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView showRegisterForm() {
-		return new ModelAndView("resourceRegister", "resource", new ResourceDetail());
+		ResourceDetail resource = new ResourceDetail();
+		return new ModelAndView("resourceRegister", "resource", resource);
 	}
 
 	/**

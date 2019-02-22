@@ -34,6 +34,25 @@ function loadProjDetails() {
 	});
 }
 
+function loadProjNames() {
+	$.ajax({
+		type : 'GET',
+		url : "/onboarding/project/names" ,
+		dataType : "text",
+		success : function(resultData) {
+			var returnedData = JSON.parse(resultData);
+			$.each(returnedData, function(key,value) {   
+			     $('#projName')
+			         .append($("<option></option>")
+			                    .attr("value",value.projectName)
+			                    .text(value.projectName)); 
+			});
+			console.log(returnedData);
+		}
+	});
+}
+
+
 $('#empId').blur(function() {
 	loadEmployeeDetails();
 });
